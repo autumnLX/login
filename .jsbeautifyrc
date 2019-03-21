@@ -1,0 +1,16 @@
+{
+  "reference": "https://github.com/HookyQR/VSCodeBeautify/blob/master/Settings.md",
+  "end_with_newline": true,
+  "indent_size": 2,
+  "html": {
+    "extra_liners": ["body"]
+  },
+  "js": {
+    "brace_style": "none,preserve-inline"
+  },
+  "css": {
+    "newline_between_rules": true,
+    "space_around_combinator": true,
+    "selector_separator_newline": true
+  }
+}

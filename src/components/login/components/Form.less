@@ -1,0 +1,205 @@
+.loginOperation {
+  position: absolute;
+  right: 180px;
+  top: 50%;
+  width: 360px;
+  margin-top: -200px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 10;
+  .loginpanel {
+    width: 360px;
+    height: 400px;
+    z-index: 10;
+    background: #fff;
+    &>div {
+      width: 250px;
+      margin: 0 auto;
+    }
+    .identityTab {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 250px;
+      height: 65px;
+      margin: 0 auto;
+      border-bottom: 1px solid #eee;
+      &>li {
+        position: relative;
+        width: 45px;
+        color: #999;
+        font-size: 18px;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        &.active {
+          color: #21bd73;
+          font-size: 20px;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background: #21bd73;
+          }
+        }
+      }
+    }
+    .error-tip {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      padding-left: 50px;
+      margin: 7px auto;
+      border: 1px solid #ff9999;
+      background: #fef2f2 url("/static/login/images/tip_error.png") no-repeat 15px center;
+      .error-tip-text {
+        color: #666;
+        font-size: 12px;
+        line-height: 14px;
+        &.red {
+          color: #ff6666;
+          cursor: pointer;
+        }
+      }
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      background: url("/static/login/images/icon_login.png");
+    }
+    .form-input {
+      .icon_username {
+        background-position: 0 -1px;
+      }
+      .icon_password {
+        background-position: -20px -1px;
+      }
+      &>input {
+        &:-webkit-autofill {
+          box-shadow: 0 0 0px 1000px white inset !important;
+        }
+      }
+    }
+    &>.errorColor {
+      border: 1px solid #ff6666;
+    }
+    &>.submit {
+      margin-top: 10px;
+      &>button {
+        width: 250px;
+        height: 40px;
+        line-height: 40px;
+        background: #24cc7c;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+      &>button:hover {
+        background: #21bd73;
+      }
+    }
+    &>.operation {
+      position: relative;
+      margin-top: 10px;
+      text-align: right;
+      &>span {
+        font-size: 12px;
+        color: #999;
+        cursor: pointer;
+      }
+    }
+    &>.other_operation {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #f7f8f7;
+      height: 60px;
+      line-height: 60px;
+      width: 100%;
+      padding: 0 70px; // text-align: left;
+      &>i {
+        display: block; // float: left;
+        // margin-top: 20px;
+        background-position: -80px -1px;
+      }
+      &>span {
+        font-size: 14px;
+        color: #999;
+        display: inline-block;
+        cursor: pointer;
+        &:nth-child(2) {
+          padding: 0 15px 0 5px;
+          position: relative;
+        }
+        &:nth-child(3) {
+          width: 90px;
+          position: relative;
+          text-align: center;
+          color: #21bd73;
+        }
+        &:nth-child(3)::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1px;
+          height: 16px;
+          background: #ccc;
+        }
+      }
+    }
+  }
+  &>.qrCode {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    width: 200px;
+    height: 400px;
+    padding-top: 10px;
+    border-radius: 4px 0 0 4px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: transform 1.5s linear;
+    &>p {
+      text-align: center;
+      line-height: 20px;
+    }
+    &>p:nth-child(1) {
+      font-size: 16px;
+      color: #333;
+      margin-top: 40px;
+    }
+    &>p.mobile {
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
+    }
+    &>img {
+      display: block;
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+    }
+    &>.studentApp {
+      margin-top: 20px;
+    }
+    &>.teacherApp {
+      margin-top: 15px;
+    }
+  }
+  &>.enter {
+    transform: translateX(-200px);
+  }
+  &>.leave {
+    transform: translateX(0px);
+  }
+}

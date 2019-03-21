@@ -1,0 +1,126 @@
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+#Login {
+  width: 100%;
+  flex: 1;
+  background: #fff;
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  .banner-wrapper {
+    display: flex;
+    width: 300%;
+    &.animated {
+      transition: transform 1s;
+    }
+    .banner {
+      flex: 1;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      &.b0 {
+        background-image: url("https://17ks.chivoxapp.com/bg1.png");
+      }
+      &.b1 {
+        background-image: url("https://17ks.chivoxapp.com/bg2.png");
+      }
+    }
+  }
+
+  .banner-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    z-index: 30;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    div {
+      width: 80px;
+      height: 10px;
+      margin: 0 15px;
+      border-radius: 5px;
+      background-color: rgba(36, 204, 124, 0.5); // cursor: pointer;
+      &.active {
+        background-color: rgba(36, 204, 124, 1); // cursor: default;
+      }
+    }
+  }
+}
+
+div.first_screen {
+  position: relative;
+  height: 100vh;
+}
+
+div.second_screen {
+  display: flex;
+  justify-content: center;
+  height: 525px;
+  overflow-x: hidden;
+}
+
+div.third_screen {
+  height: 544px;
+  &>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 544px;
+    background-image: url("https://17ks.chivoxapp.com/screen3.png");
+  }
+  ul {
+    display: flex;
+    &>li {
+      width: 320px;
+      height: 460px;
+      &>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 320px;
+        height: 460px;
+        padding-bottom: 38px;
+        padding-left: 36px;
+        background-image: linear-gradient(to right, rgba(56, 212, 171, .75), rgba(33, 189, 115, .75));
+        opacity: 0;
+        transition: opacity 500ms;
+        span {
+          color: #fff;
+          font-size: 18px;
+          &.text2 {
+            margin-top: 12px;
+            font-size: 24px;
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        &>div {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+div.intro {
+  display: flex;
+  justify-content: center;
+  height: 1084px;
+  overflow-x: hidden;
+}
+
+div.eight_screen {
+  display: flex;
+  justify-content: center;
+  height: 678px;
+  overflow-x: hidden;
+}
